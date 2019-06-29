@@ -3170,7 +3170,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style5 header p {
-				color: #8E8892;
+				color: #5c5c5c;
 			}
 
 			.wrapper.style5 header.major h2, .wrapper.style5 header.major h3, .wrapper.style5 header.major h4, .wrapper.style5 header.major h5, .wrapper.style5 header.major h6 {
@@ -3353,7 +3353,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #2165b2;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;

@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Blog - Brett Morris</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<h1><a href="index.html">Dr. Brett M. Morris</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html">Home</a></li>
+											<li><a href="blog.html">Blog</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Blog</h2>
+							<!-- <p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p> -->
+						</header>
+						<section class="wrapper style5">
+
+<!-- <div class="inner" id="utc2019XXXX">
+<section>
+<header>
+	<h4>June 28, 2019: Title</h4>
+	<p>Subtitle</p>
+</header>
+<p>
+    </p>
+</section>
+</div>
+
+<hr /> -->
+
+<div class="inner" id="UTC20190629">
+<section>
+<header>
+	<h4>June 29, 2019: Color filter approximations</h4>
+	<p>A new python package called <a href="https://github.com/bmorris3/tynt"><code>tynt</code></a></p>
+</header>
+<p>Have you ever wished there was a filter transmission curve package that just <em>knew</em>
+	approximately what the filter transmittance curve looks like without having to figure out 
+	where on the internet someone once uploaded the transmittance curve? Well look no further: 
+	introducting <a href="https://tynt.readthedocs.io/en/latest/"><code>tynt</code>, a lightweight 
+	Python package</a> for approximate transmittance curves from various astronomical filters. 
+    </p>
+<p><code>tynt</code> makes use of filter transmittance curves provided by the 
+	<a href="http://svo2.cab.inta-csic.es/theory/fps/">Spanish Virtual Observatory Filter Profile 
+	Service</a>. I've downloaded 500 of the "most common" astronomical filters used
+ 	for photometry, took the Fourier transforms of the filter transmittance curves, and saved the first
+ 	<em>N</em> complex Fourier coefficients (where N is of order 10). These complex Fourier coefficients
+ 	get saved to a FITS table within the package, totalling no more than 150 KB. That makes it small enough
+ 	that the filter transmittance approximations can be included as package data without being a pain to 
+ 	install or hogging your disk space.</p>
+<p><strong>I could use some help</strong> coming up with the most inclusive list of ~500 filters that get 
+used most often for photometry. Let me know if your subfield's favorite filter isn't included by default 
+and should be!</p>
+<p>Check out <a href="https://tynt.readthedocs.io/en/latest/">the docs</a> to get started, or 
+	<a href="https://github.com/bmorris3/tynt">the code</a> to contribute!</p>
+</section>
+</div>
+
+<hr />
+
+<div class="inner" id="UTC20190628">
+<section>
+<header>
+	<h4>June 28, 2019: Google Summer of Code</h4>
+	<p>Working with the tenacious Tiffany Jansen</p>
+</header>
+<p>Since participating as a student in 2015, I've been a mentor in the 
+	<a href="https://summerofcode.withgoogle.com">Google Summer of Code</a> internship program with 
+	<a href="https://openastronomy.org">OpenAstronomy</a> (via Astropy) for two of the last four summers. 
+	This summer I'm co-advising Columbia grad student <a href="http://user.astro.columbia.edu/~jansent/">
+	Tiffany Jansen</a> along with Erik Tollerud and Pey Lian Lim (STScI). </p>
+<p>The project we're working on is to make documentation and pull requests when necessary to make 
+	synthetic photometry easier to do in Python. For me, this was largely inspired by preparing for 
+	observations with new space telescopes, but I we're working on a more generalized toolkit which
+	can handle the Earth's atmosphere with relative ease. The coding efforts will largely be focused
+	on the existing synthetic photometry package 
+	<a href="https://github.com/spacetelescope/synphot_refactor/"><code>synphot</code></a>. To see what
+	we're working on in real time, visit <a href="https://astrotiff.home.blog">Tiffany's GSoC blog</a>. 
+    </p>
+</section>
+</div>
+
+<hr />
+
+<div class="inner" id="UTC20190627">
+<section>
+<header>
+	<h4>June 27, 2019: Hello world!</h4>
+	<p>A simple first post</p>
+</header>
+<p>If you know me, you know I like to keep a lot of irons in the fire. This blog will be yet <em>another</em>
+	iron. Predicting what I'll post in this blog is probably premature, but it will chronicle code, astrophysics, 
+	collaborations, and ideas I'm looking to share with all of you. </p>
+</section>
+</div>
+
+						</section>
+					</article>
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="mailto:morrisbrettm@gmail.com" class="icon solid fa-envelope">
+							<span class="label">Email</span></a></li>
+							<li><a href="https://github.com/bmorris3" class="icon brands fa-github" target="_blank">
+							<span class="label">Github</span></a></li>
+							<li><a href="https://twitter.com/brettmor" class="icon brands fa-twitter" target="_blank">
+							<span class="label">Twitter</span></a></li>
+							<li><a href="https://www.linkedin.com/in/brett-morris-55176a84" class="icon brands fa-linkedin" target="_blank">
+							<span class="label">LinkedIn</span></a></li>
+							<li><a href="BrettMorrisCV.pdf" class="icon solid fa-graduation-cap" target="_blank">
+							<span class="label">CV</span></a></li>
+							<li><a href="https://www.youtube.com/channel/UCTy3Tkfc7uLR3Iu2DKS67fw/playlists" class="icon brands fa-youtube" target="_blank">
+							<span class="label">YouTube</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Brett M. Morris</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
