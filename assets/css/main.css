@@ -2143,6 +2143,7 @@ input, select, textarea {
 
 		ol li {
 			padding-left: 0.25em;
+     		padding-bottom: 1.5em;
 		}
 
 	ul {
