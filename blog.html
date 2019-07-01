@@ -20,6 +20,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	</head>
 
 	<body class="is-preload">
@@ -58,7 +59,7 @@
 <!-- <div class="inner" id="UTC2019XXXX">
 <section>
 <header>
-	<h4>June 28, 2019: Title</h4>
+	<h4>July 28, 2019: Title</h4>
 	<p>Subtitle</p>
 </header>
 <p>
@@ -68,7 +69,70 @@
 
 <hr /> -->
 
-<!-- <div class="inner" id="UTC20190701">
+
+<!-- 
+<div class="inner" id="UTC20190703">
+<section>
+<header>
+	<h4>July 2, 2019: TiO Molecular Band Modeling</h4>
+	<p>The enduring, elusive spectroscopic hunt for TiO molecular bands</p>
+</header>
+<h6>Intro</h6>
+<p><a href="https://gully.github.io">Michael Gully-Santiago</a> is fond of saying
+	<blockquote>Starspots emit light!</blockquote>
+	a backhanded acknowledgement that starspots are generally thought of as dark spots, 
+	but their true nature is more complicated. I've spent the better part of two years 
+	chasing a consequence of this fact, and the paper was just accepted, so I can finally
+	talk about it! </p>
+<p>Starspots change the apparent brightness of stars as a function of time, as thousands of
+<em>Kepler</em> light curves will show you. But a lesser studied phenomenon is the way that 
+starspots affect the <em>spectra</em> of stars.</p>
+<p>There's a great series of papers by
+O'Neal, Neff and Saar from the late 90's and early 00's on using this chromatic decifit of flux 
+to our advantage. The authors studied several absorption bands of <strong>TiO</strong>, a 
+molecule which forms at temperatures below about 4000 K, as a tracer of starspot coverage.
+The idea goes: a G or K star with effective temperatures >4000 K should not have any TiO absorption
+in their spectra, because they are too hot. However, starspots often have \(\Delta T \sim 500\) K 
+and therefore can be cool enough to form TiO! The goal in this series of papers was to measure slight
+flux deficits in the spectra of active G and K stars which are likely to have substantial starspot 
+coverage by focusing on spectral bands of strong TiO absorption.</p>
+
+<h6>Lessons Learned</h6>
+<p>It has been about 20 years since those initial papers were written, so I got the itch to increment
+the effort with the ARCES echelle spectrograph on the ARC 3.5 m Telescope at Apache Point Observatory. 
+I collected about 80 hours of spectra of G and K stars, and collaborated with Jason Curtis and 
+Charli Sakari on measuring spectroscopic \(T_\text{eff}\) and \(\log g\)s with <code>SME</code> 
+and <code>MOOG</code>. We found that the spectroscopic temperatures agree really well with the Gaia DR2
+Apsis pipeline's two-color (plus parallax) photometric temperatures. 
+</p>
+<p>The effort to measure TiO absorption turned out to be really tricky at our resolution \(R\sim31,500\) 
+and S/N. We found significant starspot coverages consistent with previous studies for around a 
+dozen stars, but we only had convincing "by-eye" detections of TiO absorption in systems with spot coverage
+\(f_S \sim 0.5\). This turns out to be a consequence of flux weighting. At 7054 Å, where there's a 
+strong TiO absorption band, suppose the blackbody flux of a spot is equivalent to a \(T_\text{eff} = 4000\) K 
+source. That spot emits only 56% of the flux of a \(T_\text{eff} = 4500\) K source, a typical temperature for 
+the photosphere of a K star. Thus if you have a K star that is 10% covered in spots, the total contribution 
+of the spot's spectrum to the total spectrum is only 0.1 * 0.56 = 5%, where the other 95% of the flux is 
+coming from the warmer photospheric component. Hunting for the measly missing 5% contribution to the 
+flux centered on TiO bands is therefore tricky business. The flux-weighting effect kills your chances of 
+measuring solar-like spot coverages in modest S/N spectra, but gives you a chance to measure very large 
+starspot coverages like those of RS CVn stars.</p>
+
+<h6>Future work</h6>
+<p>I'm looking forward to trying this technique out with higher S/N, higher resolution spectra, like
+	those from HIRES and HARPS. It'd be especially valuable if we could find a variation on the 
+	technique that worked well in the near-infrared, so that we could use the TiO (or other molecular)
+	band modeling to determine starspot coverage <em>during</em> exoplanet transit spectroscopy observations.
+	I'm working with Steve Saar on writing up a state-of-the-field/post-mortem piece on the molecular
+	band modeling technique, laying out the success and challenges and prospects for the future. 
+</p>
+</section>
+</div>
+
+<hr /> -->
+
+
+<div class="inner" id="UTC20190701">
 <section>
 <header>
 	<h4>July 1, 2019: New Job</h4>
@@ -79,80 +143,26 @@
 	vibrant community that is thriving here in Bern, and making the most of the amazing 
 	collaborators that are stuck with me for the next few years.
     </p>
-</section>
-</div>
-
-<hr />
- -->
- 
-<div class="inner" id="UTC20190629">
-<section>
-<header>
-	<h4>June 29, 2019: Color filter approximations</h4>
-	<p>A new python package called <a href="https://github.com/bmorris3/tynt"><code>tynt</code></a></p>
-</header>
-<p>Have you ever wished there was a filter transmission curve package that just <em>knew</em>
-	approximately what the filter transmittance curve looks like without having to figure out 
-	where on the internet someone once uploaded the transmittance curve? Well look no further: 
-	introducting <a href="https://tynt.readthedocs.io/en/latest/"><code>tynt</code>, a lightweight 
-	Python package</a> for approximate transmittance curves from various astronomical filters. 
-    </p>
-<p><code>tynt</code> makes use of filter transmittance curves provided by the 
-	<a href="http://svo2.cab.inta-csic.es/theory/fps/">Spanish Virtual Observatory Filter Profile 
-	Service</a>. I've downloaded 500 of the "most common" astronomical filters used
- 	for photometry, took the Fourier transforms of the filter transmittance curves, and saved the first
- 	<em>N</em> complex Fourier coefficients (where N is of order 10). These complex Fourier coefficients
- 	get saved to a FITS table within the package, totalling no more than 150 KB. That makes it small enough
- 	that the filter transmittance approximations can be included as package data without being a pain to 
- 	install or hogging your disk space.</p>
-<p><strong>I could use some help</strong> coming up with the most inclusive list of ~500 filters that get 
-used most often for photometry. Let me know if your subfield's favorite filter isn't included by default 
-and should be!</p>
-<p>Check out <a href="https://tynt.readthedocs.io/en/latest/">the docs</a> to get started, or 
-	<a href="https://github.com/bmorris3/tynt">the code</a> to contribute!</p>
+<p>I submitted a paper to the arXiv last night that I'm excited to share with you tomorrow. 
+If you like starspots, stellar effective temperatures, and Bayesian spectroscopic analysis, 
+you'll like tomorrow's post! 
 </section>
 </div>
 
 <hr />
 
-<div class="inner" id="UTC20190628">
+<section class="wrapper">
+<div class="inner">
+	<header>
+		<h2>Archive</h2>
+	</header>
 <section>
-<header>
-	<h4>June 28, 2019: Google Summer of Code</h4>
-	<p>Working with the tenacious Tiffany Jansen</p>
-</header>
-<p>Since participating as a student in 2015, I've been a mentor in the 
-	<a href="https://summerofcode.withgoogle.com">Google Summer of Code</a> internship program with 
-	<a href="https://openastronomy.org">OpenAstronomy</a> (via Astropy) for two of the last four summers. 
-	This summer I'm co-advising Columbia grad student <a href="http://user.astro.columbia.edu/~jansent/">
-	Tiffany Jansen</a> along with Erik Tollerud and Pey Lian Lim (STScI). </p>
-<p>The project we're working on is to make documentation and pull requests when necessary to make 
-	synthetic photometry easier to do in Python. For me, this was largely inspired by preparing for 
-	observations with new space telescopes, but we're working on a more generalized toolkit which
-	can handle the Earth's atmosphere with relative ease. The coding efforts will largely be focused
-	on the existing synthetic photometry package 
-	<a href="https://github.com/spacetelescope/synphot_refactor/"><code>synphot</code></a>. To see what
-	we're working on in real time, visit <a href="https://astrotiff.home.blog">Tiffany's GSoC blog</a>. 
-    </p>
+<ul>
+	<li><a href="archive/201906.html">2019 June</a></li>
+</ul>
 </section>
 </div>
-
-<hr />
-
-<div class="inner" id="UTC20190627">
-<section>
-<header>
-	<h4>June 27, 2019: Hello world!</h4>
-	<p>A simple first post</p>
-</header>
-<p>If you know me, you know I like to keep a lot of irons in the fire. This blog will be yet <em>another</em>
-	iron. Predicting what I'll post in this blog is probably premature, but it will chronicle code, astrophysics, 
-	collaborations, and ideas I'm looking to share with all of you. </p>
 </section>
-</div>
-
-						</section>
-					</article>
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
