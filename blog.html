@@ -70,12 +70,57 @@
 <hr /> -->
 
 
-
 <div class="inner" id="UTC20190703">
 <section>
 <header>
+	<h4>July 3, 2019: Whose line is it anyway?</h4>
+	<p>Help needed!</p>
+</header>
+<p>This week I'm working on identifying magnetic activity-sensitive spectral features in 
+HARPS spectra, inspired by the TiO molecular band modeling approach in the 
+<a href="#UTC20190702">previous blog post</a>. If you think about spectra of high 
+temperature molecules, this post is for you!</p>
+<p>
+<strong>The idea</strong> is that we have a wealth of high
+resolution, high S/N observations of the Sun recorded by HARPS, which should contain 
+information about the magnetic activity of the Sun. While those HARPS spectra were taken, 
+NASA's Solar Dynamics Observatory (SDO) was collecting continuum imaging of the Sun, which 
+can serve as a sort of "answer key" for how much of the solar surface was covered in 
+sunspots during each HARPS observation.  
+</p>
+<p>I've come up with a technique for identifying activity sensitive lines by searching for 
+spectral channels whose flux correlates with the total spot coverage of the Sun, which predicts
+that the spectral features are activity sensitive at the red dashed lines in the following plot:
+</p> 
+<iframe src="https://widgets.figshare.com/articles/8481611/embed?show_title=1" width="568" height="351" allowfullscreen="true" frameborder="0"></iframe>
+<p><strong>Does anyone know how to identify these anonymous lines?</strong> In the above figure I've 
+plotted the VALD3 line list for the Sun, which identifies most of the atomic features. I've looked
+at HITEMP databases for water and CO and haven't found correlations with this little suspicious 
+line list.
+</p>
+<p>The lines occur at: 
+	<ul>
+		<li>5132.53 Å</li>
+		<li>5132.55 Å</li>
+		<li>5138.0 Å</li>
+		<li>5141.38 Å</li>
+		<li>5157.01 Å</li>
+		<li>5174.19 Å</li>
+		<li>5178.0 Å</li>
+	</ul>
+	If those wavelengths mean anything to you, <em>please</em> <a href="mailto:morrisbrettm@gmail.com">let me know</a>!
+</p>
+</section>
+</div>
+
+<hr />
+
+
+<div class="inner" id="UTC20190702">
+<section>
+<header>
 	<h4>July 2, 2019: TiO Molecular Band Modeling</h4>
-	<p>The enduring, elusive spectroscopic hunt for TiO molecular bands</p>
+	<p>The enduring, elusive spectroscopic hunt for TiO molecular bands [<a href="https://arxiv.org/abs/1907.00423">paper</a>]</p>
 </header>
 <h6>Intro</h6>
 <p><a href="https://gully.github.io">Michael Gully-Santiago</a> is fond of saying
