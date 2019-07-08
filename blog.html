@@ -69,6 +69,49 @@
 
 <hr /> -->
 
+<div class="inner" id="UTC20190708">
+	<section>
+	<header>
+	  <h4>July 8, 2019: Machine Learning Day 1</h4>
+		  <p>In which Brett tutors his laptop</p>
+			</header>
+			<p>
+			I'm starting this week with a new adventure a <em>deep</em> dive into machine learning, 
+			by teaching myself: (a) what machine learning really is, (b) coding up a 1D convolutional
+			neural net, and (c) trying to apply the CNN to real Kepler data. 
+			</p>
+			<p>
+			Unsurprisingly, the goal
+			for this project is to hunt for HAT-P-11-like objects in Kepler and TESS photometry, by
+			hunting for starspot occultations within known transiting systems. I've developed a forward
+			model for starspot occultations called <em><a href="https://fleck.readthedocs.io">fleck</a></em>
+			which I'm using to generate thousands of simulated transit light curves with Kepler-like noise, 
+			labeling each one as "occults spots" or "occults no spots". The resulting catalog of labelled light
+			curves are then used as a training set for my supervised learning technique of choice for this
+			problem, called convolutional neural networks.
+			</p>
+			<p>
+			When I make it further along in this project, I'll write a post explaining CNNs in more detail, 
+			but for now, suffice it to say: it is a machine learning technique that can be used to classify
+			time-series signals quickly. I'm going to use the rest of this short post to reflect on lessons learned
+			in day one of machine learning bootcamp: 
+			<ol>
+				<li>95% of my effort is likely to be spent constructing a realistic enough training set for the model
+				to produce useful predictions.</li>
+				<li>I couldn't have made any progress today, or maybe ever, without 
+				<a href="https://keras.io">keras</a>. </li>
+				<li>Having a training set doesn't make it a realistic or useful one.</li>
+				<li><em>The machine learns only what you teach it</em>.</li>
+			</ol>
+
+			Lots of people preach ML as the hammer to solve your big data problems, but I'm learning that
+			it takes a <em>lot</em> of work to make your data ML-ready. 
+		  </p>
+</section>
+</div>
+
+<hr />
+
 <div class="inner" id="UTC20190704">
 <section>
 <header>
