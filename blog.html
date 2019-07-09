@@ -69,6 +69,70 @@
 
 <hr /> -->
 
+<div class="inner" id="UTC20190709">
+	<section>
+	<header>
+	  <h4>July 9, 2019: Machine Learning Day 2</h4>
+		<p>What's a convolutional neural network?</p>
+			</header>
+<p>
+Yesterday I wrote that I would explain what a convolutional neural net is, and I'm
+realizing now that it's hard to explain without figures or animations, so maybe it's
+not suited well to this blog's format. But I'm going to try to explain in words what
+I've learned this week, in the hopes that it helps me write up the paper that I'm 
+working on.
+</p>
+<p>
+A neural network can be thought of as a series of neurons, where a neuron is a 
+function which takes inputs from data or other neurons, and sends outputs to yet more neurons.
+Neurons are grouped into "layers", i.e. there's first the input signal (your data), 
+then that signal passes onto a layer of neurons (functions), which produce outputs that
+trigger neurons in the next layer, and so on until the output layer, where the 
+resulting vector typically estimates the ~likelihood that your input data belong to
+a set of labels on which the model was trained.
+</p>
+<p>
+This is a supervised learning technique, where you pass pre-labeled data into the 
+model, let it filter through the various layers of neurons and produce an output. Then
+the predicted output is compared against the true labels of the data. Through iteration
+and backpropagation (which is somewhat magical), you tweak the weights between each neuron
+until the "losses" decrease, where we can think of losses like chi-squared or other 
+badness-of-fit metrics. Generally as the losses decrease, the accuracy of your model increases
+-- in other words, the model predicts the true label for each input more often.
+</p>
+<p>
+A <em> convolutional</em> neural network is one where the function that's operating
+within some of the neurons is a convolution of the input data with a kernel. This is
+a smart operation to choose because convolutions will trigger a neuron when the kernel 
+is convolved with a matching signal, no matter where the signal was detected in your data.
+So when you're hunting for a planet in photometry, <a href="https://arxiv.org/abs/1712.05044">
+for example</a>, you don't really care at what time the transit occurs, you just care that 
+some of the input signal matches the expected signal (a transit).
+</p>
+<p>
+I'm using a CNN built with <a href="https://keras.io">keras</a>, a Python module built
+on top of lower-level ML packages like <a href="https://github.com/tensorflow/tensorflow">
+TensorFlow</a>. Keras makes it as straightforward as possible to go from "I get what a CNN
+is and I want to implement one in a few lines of Python" to "oh wow it's actually working".
+In my experience, getting started wasn't so different from getting to know a new module in scikit-learn -- 
+the API is familiar and Pythonic, the docs are thorough, and the code is <em>fast</em>. 
+</p>
+<p>
+Are you intrigued? I found the following tutorials really helpful:
+<ul>
+	<li><a href="https://www.datacamp.com/community/tutorials/convolutional-neural-networks-python">Convolutional Neural Networks in Python with Keras</a></li>
+	<li><a href="https://blog.goodaudience.com/introduction-to-1d-convolutional-neural-networks-in-keras-for-time-sequences-3a7ff801a2cf">Introduction to 1D Convolutional Neural Networks in Keras for Time Sequences</a></li>
+	<li>This absurdly quiet but worth-the-trouble video:<br />
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/FmpDIaiMIeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+	</li>
+</ul>
+I hope you find these resources as helpful as I did. Happy hacking!
+</p>
+					</section>
+				</div>
+
+				<hr />
+
 <div class="inner" id="UTC20190708">
 	<section>
 	<header>
