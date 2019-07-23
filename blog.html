@@ -69,6 +69,51 @@
 
 <hr /> -->
 
+<div class="inner" id="UTC20190723">
+	<section>
+	<header>
+	  <h4>July 23, 2019: Neural net to the rescue</h4>
+<p>I found a thing!</p>
+</header>
+<p>
+For the last few days I've been thinking about open science and how best to communicate
+what I'm working on without giving away all of my interesting targets and ideas. I think
+there's a healthy balance that can be reached somewhere between sharing everything and
+sharing nothing, and I'm struggling to find that balance at the moment. But that said, I have a
+new object to share with you!
+</p>
+<p>
+In an earlier post (see below), I wrote that I built a convolutional neural network to hunt
+for transits which contain spot occultations. I generated thousands of realistic Kepler-like
+light curves with and without spot occultations, and trained the neural net to classify light curves
+with spot occultations; then applied the network to TESS photometry through Sector 12. At first I 
+didn't find anything notable, save for one potential spot occultation in a single transit, and I was
+feeling pretty down about the project for only producing a null result. Julianne Dalcanton reminded me:
+</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Plus, non-detections are still new knowledge, which is Science. <br><br>Not as fun, of course.</p>&mdash; Julianne Dalcanton (@dalcantonJD) <a href="https://twitter.com/dalcantonJD/status/1152534301742948352?ref_src=twsrc%5Etfw">July 20, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>
+But then I looked closer at the objects flagged by the neural net and found something exciting.
+It appears to be a transiting object orbiting a nearby M star with a very short orbital period. 
+What makes this object so interesting is not the transiting object itself, which may be an inflated hot 
+Neptune or similar, but the star it transits. The host star appears to have rotational modulation 
+synchronized to the orbital period of the transiting object, and the eclipse events are dominated by
+consistent starspot occultations. I can explain the full light curve, including the in- and out-of-transit
+portions, really well with only a few starspots using Leslie Hebb and Graeme Rohn's starspot photometry 
+software <a href="http://github.com/lesliehebb/STSP/"><code>STSP</code></a>.
+</p>
+<p>
+If the system is what I think it is, it has the potential to be my next source of obsession like 
+<a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...846...99M/abstract">HAT-P-11</a> was during 
+my dissertation, providing a fascinating window into the stellar dynamo of an M star.
+If you're interested in collaborating on this target and have access to telescope time in the south, 
+shoot me an email!
+</p>
+
+</section>
+</div>
+
+<hr />
+
 <div class="inner" id="UTC20190710">
 	<section>
 	<header>
